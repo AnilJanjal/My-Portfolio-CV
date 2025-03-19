@@ -17,7 +17,7 @@ export const EXPERIENCES = [
     technologies: ["Javascript", "React.js", "Express.js", "MongoDB","GIT", "Github"],
   },
   {
-    year: "2022 - 2023",
+    year: "2022 - 2024",
     role: "Full Stack Developer- Trainee",
     company: "Newton School",
     description: `Developed and deployed full-stack web applications,enhancing skills in both front-end and back-end technologies. -Gained hands-on experience in building user-centric applications with morder frameworks and tools. -Worked on responsive UI design,and state management.`,
