@@ -30,7 +30,7 @@ export const PROJECTS = [
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "React", "Firebase"],
+    technologies: ["ReactJS", "Firebase", "HTML", "CSS", "React", "Router", "Context API", "Git"],
   },
   {
     title: "LearnCraft (Course Selling Platform)",
@@ -44,21 +44,21 @@ export const PROJECTS = [
     image: project1,
     description:
       "Cloned UI of popular fashion e-commerce platform with shopping cart, filtering, and product listing features.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "Express.js", " Socket.IO", "MongoDB"],
+    technologies: ["HTML", "CSS", "React", "Node.js", "Express.js"],
   },
   {
     title: "MediMizer (Hospital Management System)",
     image: project3,
     description:
       "MediMizer help hospitals and others who need Hospital Management Solutions for BioMedical Compliance, From customer support to tracking parts to tracking medical equipment our software helps you filter down to the finest detail to get the data for decision making.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+    technologies: ["HTML", "React", "Axios","Node.js + Express.js", "Bootstrap","MongoDB", "JWT", "RESTful APIs" ,"CI/CD" ,"AWS"],
   },
   {
     title: "FieldServio (Field Service Management Tool)",
     image: project1,
     description:
       "FieldServio helps you manage it all, whether it be customer management, inventory control, mobile field operations, or financial reporting.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "Express.js", " Socket.IO", "MongoDB"],
+    technologies: ["HTML", "Tailwind CSS", "React", "Node.js", "Express.js", " Socket.IO", "MongoDB", "AWS","CI/CD" , "Postman" ],
   },
 
 ];
