@@ -24,7 +24,7 @@ function Hero() {
               animate="visible"
               className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
-              Anil Janjal
+              Anil Devidas Janjal
             </motion.h1>
             <motion.span
               variants={container(0.5)}
@@ -32,7 +32,7 @@ function Hero() {
               animate="visible"
               className="bg-gradient-to-r from-orange-300 via-white to-green-500 bg-clip-text text-3xl tracking-tight text-transparent"
             >
-              Full Stack Developer</motion.span>
+              Full Stack Web Developer</motion.span>
             <motion.p
               variants={container(1)}
               initial="hidden"
