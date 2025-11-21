@@ -6,7 +6,7 @@ const Navbar = () => {
     return <nav className="mb-20 flex items-center justify-between py-6">
       <div className="flex flex-shrink-0 items-center">
       <h1 className="mx-2 w-10 flex space-x-0.1 text-1xl font-bold">
-    {["A",  "J","_____"].map((char, index) => (
+    {["Anil",  "Janjal","_____"].map((char, index) => (
       <span
         key={index}
         className={`inline-block ${

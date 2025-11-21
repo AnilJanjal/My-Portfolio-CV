@@ -1,7 +1,7 @@
 import { HERO_CONTENT } from "../constants"
 import profilePic from "../assets/AJIMG-preview1.png"
 import { motion } from "framer-motion"
-import resumePDF from "../assets/Anil_Janjal_CV.pdf"
+import resumePDF from "../assets/Anil Janjal__CV.pdf"
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
