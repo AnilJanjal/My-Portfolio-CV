@@ -1,34 +1,57 @@
-import { CONTACT } from "../constants"
-import { motion} from "framer-motion"
+import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./Icons";
+import SectionHeader from "./SectionHeader";
 
-const Contact = () => {
+export default function Contact({ resume }) {
+  const { profile, education, certifications } = resume;
+
   return (
-    <div className="border-b border-neutral-900 pb-20">
-        <motion.h2
-        whileInView={{opacity:1, y:0}}
-        initial={{opacity :0, y: -100}}
-        transition={{duration: 0.5}}
-        className="my10 text-center text-4xl">
-            Get in Touch
-            </motion.h2>
-        <div className="text-center tracking-tighter">
-            <motion.p
-            whileInView={{opacity: 1, x: 0}}
-            initial={{opacity: 0, x: -100}}
-            transition={{duration: 1}}
-            className="my-4">{CONTACT.address}</motion.p>
-            <motion.p
-            whileInView={{opacity: 1, x: 0}}
-            initial={{opacity: 0, x: 100}}
-            transition={{duration: 1}}
-            className="my-4">{CONTACT.phoneNo}</motion.p>
-            <a href="#" className="border-b">
-                {CONTACT.email}
+    <section className="section contact-section" id="contact">
+      <div className="shell contact-grid">
+        <div>
+          <SectionHeader
+            eyebrow="Contact"
+            title="Ready for frontend, mobile, and full stack roles."
+            intro="Based in Pune, available for teams building polished, production-ready web and mobile applications."
+          />
+          <div className="contact-actions">
+            <a className="btn btn-primary" href={`mailto:${profile.email}`}>
+              Email Anil <MailIcon />
             </a>
+            <a className="btn btn-secondary" href={`tel:${profile.phone.replace(/\s/g, "")}`}>
+              Call <PhoneIcon />
+            </a>
+          </div>
         </div>
-      
-    </div>
-  )
-}
 
-export default Contact
+        <aside className="resume-side-panel" aria-label="Education and links">
+          <div>
+            <h3>Education</h3>
+            {education.map((item) => (
+              <p key={item.title}>
+                <strong>{item.title}</strong>
+                <span>{item.place}</span>
+                <small>{item.period}</small>
+              </p>
+            ))}
+          </div>
+
+          <div>
+            <h3>Certification</h3>
+            {certifications.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
+          </div>
+
+          <div className="footer-links">
+            <a href={profile.linkedin} target="_blank" rel="noreferrer">
+              <LinkedinIcon /> LinkedIn
+            </a>
+            <a href={profile.github} target="_blank" rel="noreferrer">
+              <GithubIcon /> GitHub
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+}

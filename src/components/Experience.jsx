@@ -1,56 +1,38 @@
-import { EXPERIENCES } from "../constants"
-import { motion } from "framer-motion"
+import SectionHeader from "./SectionHeader";
 
+export default function Experience({ items }) {
+  return (
+    <section className="section shell" id="experience">
+      <SectionHeader
+        eyebrow="Professional Experience"
+        title="Current resume timeline."
+        intro="Each role highlights the work most relevant to frontend, mobile, and full stack product delivery."
+      />
 
-const Experience = () => {
-    return (
-        <div className="border-b border-neutral-900 pb-4">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="my-20 text-center text-4xl">Experience</motion.h1>
-            <div>
-                {EXPERIENCES.map((experience, index) => (
-                    <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full lg:w-1/4">
-                            <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
-                        </motion.div>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full max-w-xl lg:w-3/4">
-                            <h6 className="mb-2 font-semibold">
-                                {experience.role} -{""}
-                                <span className="text-sm text-purple-100">
-                                    {experience.company}
-                                </span>
-                            </h6>
-                            <p className="mt-2 text-neutral-400 whitespace-pre-line text-sm">
-  {experience.description}
-</p>
-                            <div className="w-full flex flex-wrap gap-2 sm:flex-row">
-                                {experience.technologies.map((tech, index) => (
-                                    <span
-                                        key={index}
-                                        className="rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                ))}
+      <div className="timeline">
+        {items.map((item) => (
+          <article className="timeline-item" key={`${item.company}-${item.period}`}>
+            <div className="timeline-meta">
+              <span>{item.period}</span>
+              <small>{item.location}</small>
             </div>
-        </div>
-    )
-
+            <div className="timeline-content">
+              <h3>{item.role}</h3>
+              <p className="company">{item.company}</p>
+              <ul>
+                {item.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <div className="pill-list compact">
+                {item.stack.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
-
-export default Experience
