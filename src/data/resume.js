@@ -95,6 +95,37 @@ export const resume = {
       stack: ["MERN", "Redux", "Vercel", "Netlify", "Code Reviews"],
     },
   ],
+  featuredWebsite: {
+    name: "AkshaTools",
+    url: "https://www.akshatools.com",
+    category: "Online Productivity Platform",
+    summary:
+      "AkshaTools is an online productivity platform with 24+ browser-based tools for images, PDFs, video, audio, AI, and utility workflows. It includes a dedicated Studio Canvas where users can search, filter, open, and run tools inside one workspace.",
+    highlights: [
+      "Fast browser-side processing for privacy-friendly workflows.",
+      "Dedicated Studio Canvas for searching, filtering, opening, and running tools in one workspace.",
+      "Responsive, app-like experience focused on simple tool discovery and repeat use.",
+    ],
+    tools: [
+      "AI Background Remover",
+      "AI Image Generator",
+      "Image Compressor",
+      "Passport Photo Maker",
+      "DP Maker",
+      "PDF Merger",
+      "PDF Splitter",
+      "PDF Compressor",
+      "PDF to Word",
+      "Video Cutter",
+      "Video Compressor",
+      "MP3 Cutter",
+      "Voice Remover",
+      "Noise Remover",
+      "QR Generator",
+      "Sticker Maker",
+      "YouTube Thumbnail Downloader",
+    ],
+  },
   projects: [
     {
       title: "Buddy4Travel Mobile Application",

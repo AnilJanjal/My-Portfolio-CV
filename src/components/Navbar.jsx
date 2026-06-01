@@ -2,6 +2,7 @@ import { GithubIcon, LinkedinIcon, VercelIcon } from "./Icons";
 
 const links = [
   { href: "#experience", label: "Experience" },
+  { href: "#live-work", label: "Live Work" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];

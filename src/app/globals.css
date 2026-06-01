@@ -597,6 +597,112 @@ a {
   line-height: 1.65;
 }
 
+.featured-work-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.14fr) minmax(340px, 0.86fr);
+  gap: 24px;
+  align-items: stretch;
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(247, 248, 246, 0.72)),
+    radial-gradient(circle at 84% 8%, rgba(216, 138, 45, 0.14), transparent 22rem);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.website-preview-shell {
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 28, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.browser-bar {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(23, 32, 28, 0.1);
+  padding: 0 14px;
+  background: #f4f7f5;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.browser-dot:nth-child(2) {
+  background: var(--amber);
+}
+
+.browser-dot:nth-child(3) {
+  background: var(--green);
+}
+
+.browser-address {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 999px;
+  padding: 7px 12px;
+  overflow: hidden;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.website-preview-shell iframe {
+  width: 100%;
+  height: 474px;
+  display: block;
+  border: 0;
+  background: #ffffff;
+}
+
+.featured-work-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.featured-work-copy h3 {
+  margin: 0;
+  color: var(--deep);
+  font-size: 38px;
+  line-height: 1.05;
+}
+
+.featured-work-copy > p:not(.project-category) {
+  color: #46534d;
+  line-height: 1.7;
+}
+
+.feature-list {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: #495550;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+.featured-work-copy .btn {
+  align-self: flex-start;
+  margin-top: 22px;
+}
+
 .contact-section {
   padding: 76px 0 96px;
   background: linear-gradient(135deg, var(--deep) 0%, var(--deep-2) 100%);
@@ -744,6 +850,7 @@ a {
 
 @media (max-width: 1040px) {
   .hero-grid,
+  .featured-work-card,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -774,6 +881,14 @@ a {
 
   .timeline-meta {
     padding-top: 0;
+  }
+
+  .website-preview-shell {
+    min-height: 470px;
+  }
+
+  .website-preview-shell iframe {
+    height: 424px;
   }
 }
 
@@ -854,6 +969,26 @@ a {
   .skills-grid,
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .featured-work-card {
+    padding: 10px;
+  }
+
+  .website-preview-shell {
+    min-height: 390px;
+  }
+
+  .website-preview-shell iframe {
+    height: 344px;
+  }
+
+  .featured-work-copy {
+    padding: 12px;
+  }
+
+  .featured-work-copy h3 {
+    font-size: 30px;
   }
 
   .section,
