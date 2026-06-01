@@ -6,7 +6,7 @@ export default function Projects({ items }) {
       <SectionHeader
         eyebrow="Key Projects"
         title="Selected work across product categories."
-        intro="A portfolio-ready rewrite of the resume project list, grouped for quick recruiter review."
+        intro="Selected project work grouped by product category and technical scope."
       />
 
       <div className="project-grid">

@@ -7,7 +7,7 @@ export default function Milestones({ items }) {
       <SectionHeader
         eyebrow="Career Milestones"
         title="Production-focused delivery across web and mobile."
-        intro="A concise snapshot of the outcomes and platforms highlighted in the current resume."
+        intro="A concise snapshot of outcomes and product areas I have delivered across."
       />
       <div className="milestone-grid">
         {items.map((item) => (

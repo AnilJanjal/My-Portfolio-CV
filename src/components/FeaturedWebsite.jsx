@@ -7,7 +7,7 @@ export default function FeaturedWebsite({ website }) {
       <SectionHeader
         eyebrow="Live Product"
         title="See a real production platform I built."
-        intro="This section gives recruiters and clients a direct way to inspect live work from inside the portfolio."
+        intro="Explore my live work directly and inspect the product experience in action."
       />
 
       <article className="featured-work-card">

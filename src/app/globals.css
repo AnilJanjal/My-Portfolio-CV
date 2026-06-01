@@ -613,9 +613,8 @@ a {
 }
 
 .website-preview-shell {
-  --preview-frame-height: 584px;
-  --preview-frame-scale: 0.37;
-  --preview-frame-width: 1440px;
+  --preview-frame-height: 460px;
+  --preview-frame-scale: 0.47;
   position: relative;
   min-height: 258px;
   max-height: 258px;
@@ -671,14 +670,14 @@ a {
 .website-preview-shell iframe {
   position: absolute;
   top: 42px;
-  left: 50%;
-  width: var(--preview-frame-width);
+  left: 0;
+  width: calc(100% / var(--preview-frame-scale));
   height: var(--preview-frame-height);
   display: block;
   border: 0;
   background: #ffffff;
-  transform: translateX(-50%) scale(var(--preview-frame-scale));
-  transform-origin: top center;
+  transform: scale(var(--preview-frame-scale));
+  transform-origin: top left;
 }
 
 .featured-work-copy {
@@ -916,10 +915,19 @@ a {
   }
 
   .website-preview-shell {
-    --preview-frame-height: 640px;
-    --preview-frame-scale: 0.325;
-    min-height: 250px;
-    max-height: 250px;
+    --preview-frame-height: 315px;
+    --preview-frame-scale: 0.82;
+    min-height: 300px;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 820px) {
+  .website-preview-shell {
+    --preview-frame-height: 372px;
+    --preview-frame-scale: 0.58;
+    min-height: 258px;
+    max-height: 258px;
   }
 }
 
@@ -1007,8 +1015,8 @@ a {
   }
 
   .website-preview-shell {
-    --preview-frame-height: 880px;
-    --preview-frame-scale: 0.22;
+    --preview-frame-height: 647px;
+    --preview-frame-scale: 0.3;
     min-height: 236px;
     max-height: 236px;
   }

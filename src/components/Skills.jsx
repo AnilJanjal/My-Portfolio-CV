@@ -6,7 +6,7 @@ export default function Skills({ groups }) {
       <SectionHeader
         eyebrow="Technical Skills"
         title="A balanced stack for modern product teams."
-        intro="Organized directly from the current resume so recruiters can scan by discipline."
+        intro="Grouped by discipline so the stack is easy to scan."
       />
       <div className="skills-grid">
         {groups.map((group) => (
