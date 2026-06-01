@@ -47,7 +47,7 @@ a {
 }
 
 .shell {
-  width: min(1180px, calc(100% - 40px));
+  width: calc(100% - 32px);
   margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ a {
 }
 
 .nav-shell {
-  width: min(1180px, calc(100% - 40px));
+  width: calc(100% - 32px);
   min-height: 74px;
   margin: 0 auto;
   display: flex;
@@ -934,7 +934,7 @@ a {
 @media (max-width: 720px) {
   .shell,
   .nav-shell {
-    width: min(100% - 28px, 1180px);
+    width: calc(100% - 24px);
   }
 
   .nav-shell {
