@@ -29,16 +29,13 @@ export default function FeaturedWebsite({ website }) {
         <div className="featured-work-copy">
           <p className="project-category">{website.category}</p>
           <h3>{website.name}</h3>
-          <p>{website.summary}</p>
-          <ul className="feature-list">
-            {website.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
-            ))}
-          </ul>
+          <p className="featured-summary">{website.summary}</p>
+          <p className="featured-highlight">{website.highlights[0]}</p>
           <div className="pill-list compact">
-            {website.tools.map((tool) => (
+            {website.tools.slice(0, 5).map((tool) => (
               <span key={tool}>{tool}</span>
             ))}
+            <span>{website.tools.length - 5}+ more</span>
           </div>
           <a className="btn btn-primary" href={website.url} target="_blank" rel="noreferrer">
             Open AkshaTools <ArrowUpRightIcon />

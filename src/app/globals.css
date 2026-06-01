@@ -599,8 +599,8 @@ a {
 
 .featured-work-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.14fr) minmax(340px, 0.86fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
+  gap: 18px;
   align-items: stretch;
   border: 1px solid rgba(23, 32, 28, 0.1);
   border-radius: 8px;
@@ -608,11 +608,12 @@ a {
     linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(247, 248, 246, 0.72)),
     radial-gradient(circle at 84% 8%, rgba(216, 138, 45, 0.14), transparent 22rem);
   box-shadow: var(--shadow);
-  padding: 16px;
+  padding: 14px;
 }
 
 .website-preview-shell {
-  min-height: 520px;
+  min-height: 258px;
+  max-height: 258px;
   overflow: hidden;
   border: 1px solid rgba(23, 32, 28, 0.12);
   border-radius: 8px;
@@ -620,7 +621,7 @@ a {
 }
 
 .browser-bar {
-  min-height: 46px;
+  min-height: 42px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -662,7 +663,7 @@ a {
 
 .website-preview-shell iframe {
   width: 100%;
-  height: 474px;
+  height: 216px;
   display: block;
   border: 0;
   background: #ffffff;
@@ -672,35 +673,47 @@ a {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  padding: 18px;
+  padding: 10px 12px;
 }
 
 .featured-work-copy h3 {
   margin: 0;
   color: var(--deep);
-  font-size: 38px;
+  font-size: 28px;
   line-height: 1.05;
 }
 
-.featured-work-copy > p:not(.project-category) {
+.featured-summary {
+  margin: 18px 0 0;
   color: #46534d;
-  line-height: 1.7;
+  line-height: 1.6;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-.feature-list {
-  margin: 4px 0 0;
-  padding-left: 18px;
+.featured-highlight {
+  margin: 14px 0 0;
+  font-weight: 700;
+  line-height: 1.5;
   color: #495550;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
-.feature-list li {
-  margin-bottom: 10px;
-  line-height: 1.55;
+.featured-work-copy .pill-list {
+  max-height: 38px;
+  overflow: hidden;
 }
 
 .featured-work-copy .btn {
   align-self: flex-start;
-  margin-top: 22px;
+  margin-top: auto;
+  min-height: 44px;
+  padding: 11px 16px;
 }
 
 .contact-section {
@@ -884,11 +897,12 @@ a {
   }
 
   .website-preview-shell {
-    min-height: 470px;
+    min-height: 250px;
+    max-height: 250px;
   }
 
   .website-preview-shell iframe {
-    height: 424px;
+    height: 208px;
   }
 }
 
@@ -976,11 +990,12 @@ a {
   }
 
   .website-preview-shell {
-    min-height: 390px;
+    min-height: 236px;
+    max-height: 236px;
   }
 
   .website-preview-shell iframe {
-    height: 344px;
+    height: 194px;
   }
 
   .featured-work-copy {
